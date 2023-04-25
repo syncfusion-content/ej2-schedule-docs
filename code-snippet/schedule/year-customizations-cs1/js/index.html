@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Schedule Typescript Component</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Typescript Schedule Control">
+    <meta name="author" content="Syncfusion">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-base/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-buttons/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-calendars/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-dropdowns/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-inputs/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-navigations/styles/material.css" rel="stylesheet">
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-popups/styles/material.css" rel="stylesheet"> 
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-schedule/styles/material.css" rel="stylesheet">
+    
+    
+    <style>
+        .e-schedule .e-vertical-view .e-resource-cells {
+            height: 62px;
+        }
+    
+        .e-schedule .template-wrap {
+            display: flex;
+            text-align: left;
+        }
+    
+        .e-schedule .template-wrap .resource-details {
+            padding-left: 10px;
+        }
+    
+        .e-schedule .template-wrap .resource-details .resource-name {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    
+        .e-schedule.e-device .template-wrap .resource-details .resource-name {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    
+        .e-schedule.e-device .e-resource-tree-popup .e-fullrow {
+            height: 50px;
+        }
+    
+    </style>
+<script src="https://cdn.syncfusion.com/ej2/20.4.38/dist/ej2.min.js" type="text/javascript"></script>
+<script src="es5-datasource.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+    <script id="resourceTemplate" type="text/x-template">
+        <div class='template-wrap'>
+            <div class="resource-details">
+                <div class="resource-name">${resourceData.text}</div>
+            </div>
+        </div>
+    </script>
+    <div id="container">
+        <div id="Schedule"></div>
+    </div>
+
+
+<script>
+var ele = document.getElementById('container');
+if(ele) {
+  ele.style.visibility = "visible";
+}   
+      </script>
+<script src="index.js" type="text/javascript"></script>
+</body></html>

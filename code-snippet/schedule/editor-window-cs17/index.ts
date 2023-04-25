@@ -1,0 +1,25 @@
+
+
+import { Schedule, Day, Week, WorkWeek, Month, MoreEventsClickArgs } from '@syncfusion/ej2-schedule';
+import { scheduleData } from './datasource.ts';
+import { createElement } from '@syncfusion/ej2-base';
+
+Schedule.Inject(Day, Week, WorkWeek, Month);
+let scheduleObj: Schedule = new Schedule({
+    width: '100%',
+    height: '550px',
+    selectedDate: new Date(2018, 1, 15),
+    currentView: 'Month',
+    views: ['Day', 'Week', 'WorkWeek', 'Month'],
+    eventSettings: { dataSource: scheduleData }
+});
+scheduleObj.appendTo('#Schedule');
+
+let closeButton = createElement("Button", { id: 'closeQuickInfo' });
+document.getElementById('button').appendChild(closeButton);
+closeButton.textContent = "Close Quick Info Popup";
+closeButton.onclick = (): void => {
+  scheduleObj.closeQuickInfoPopup();
+};
+
+

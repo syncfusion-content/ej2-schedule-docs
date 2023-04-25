@@ -1,0 +1,22 @@
+#container {
+  visibility: hidden;
+  display: flex;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  width: 30%;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+.content-wrapper {
+  display: flex;
+}
+
+.control-section {
+  padding-right: 10px;
+  width:70%;
+}
