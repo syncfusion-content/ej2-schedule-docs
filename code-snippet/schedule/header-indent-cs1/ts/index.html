@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Schedule Typescript Component</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Typescript Schedule Control" />
+    <meta name="author" content="Syncfusion" />
+    <link href="index.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-base/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-buttons/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-calendars/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-dropdowns/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-inputs/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-navigations/styles/material.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-popups/styles/material.css" rel="stylesheet" />    
+    <link href="https://cdn.syncfusion.com/ej2/20.3.56/ej2-schedule/styles/material.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js" type="text/javascript"></script>
+    <script src="systemjs.config.js" type="text/javascript"></script>
+<style>
+    .e-schedule .e-timeline-view .e-resource-left-td {
+        vertical-align: bottom;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text,
+    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text {
+        font-weight: 500;
+        padding: 0;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text>div {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        flex: 0 0 33.3%;
+        font-weight: 500;
+        height: 36px;
+        line-height: 34px;
+        padding-left: 50px;
+    }
+
+    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text>div {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        flex: 0 0 33.3%;
+        font-weight: 500;
+        height: 36px;
+        line-height: 34px;
+        padding-left: 50px;
+    }
+
+    /* csslint ignore:start */
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-resource-cells {
+        border-bottom-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-resource-cells .e-resource-text {
+        font-weight: 500;
+    }
+
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-header-cells .e-resource-text,
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-all-day-cells .e-resource-text {
+        display: none;
+    }
+    /* csslint ignore:end */
+</style>
+
+<body>
+    <script id="indentTemplate" type="text/x-template">
+        <div class='e-resource-text'>
+            <div class="text">Resources</div>
+        </div>
+    </script>
+    <div id='loader'>LOADING....</div>
+    <div id='container'>
+        <div id="Schedule"></div>
+    </div>
+</body>
+    
+</html>
