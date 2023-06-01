@@ -9,12 +9,6 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-﻿---
-title: "Recurrence Editor | Scheduler"
-component: "Scheduler"
-description: "This section demonstrates the options available in recurrence editor and how to use its available methods separately in an application."
----
-
 # Recurrence editor in ##Platform_Name## Schedule control
 
 The Recurrence editor is integrated into Scheduler editor window by default, to process the recurrence rule generation for events. Apart from this, it can also be used as an individual component referring from the Scheduler repository to work with the recurrence related processes.
