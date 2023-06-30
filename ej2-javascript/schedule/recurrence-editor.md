@@ -77,7 +77,7 @@ By default, there are 3 types of end options available in the recurrence editor 
 * Until
 * Count
 
-It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate `endTypes` option.
+It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate [`endTypes`](https://helpej2.syncfusion.com/documentation/api/recurrence-editor/#endtypes) option.
 
 {% if page.publishingplatform == "typescript" %}
 
