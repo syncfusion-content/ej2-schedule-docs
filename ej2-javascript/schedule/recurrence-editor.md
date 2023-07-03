@@ -69,6 +69,43 @@ The other properties available in recurrence editor are tabulated below,
 | value | string | Sets the recurrence rule value on recurrence editor. |
 | selectedType | number | Sets the specific repeat type on the recurrence editor.|
 
+## Customizing the End Type Option in Editor
+
+By default, there are 3 types of end options available in the recurrence editor such as:
+
+* Never
+* Until
+* Count
+
+It is possible to customize the recurrence editor to display only the specific end options, such as the `Until` and `Count` options alone, by setting the appropriate [`endTypes`](https://helpej2.syncfusion.com/documentation/api/recurrence-editor/#endtypes) option.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/schedule/recurrence-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/recurrence-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/recurrence-cs2" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/schedule/recurrence-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/recurrence-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/recurrence-cs2" %}
+{% endif %}
+
 ## Accessing the recurrence rule string
 
 The recurrence rule is usually generated based on the options selected from the recurrence editor and also it follows the [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications. The generated recurrence rule string is a valid one to be used with the Scheduler event’s recurrence rule field.
