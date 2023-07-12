@@ -8,7 +8,7 @@ var scheduleObj = new ej.schedule.Schedule({
     selectedDate: new Date(1996, 6, 9),
     currentView: 'Month',
     eventSettings: {
-        query: new Query(),
+        query:  new ej.data.Query(),
         includeFiltersInQuery: true, dataSource: dataManager, fields: {
             id: 'Id',
             subject: { name: 'ShipName' },
