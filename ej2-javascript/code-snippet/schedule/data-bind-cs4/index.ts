@@ -11,19 +11,30 @@ class CustomAdaptor extends ODataV4Adaptor {
         let original: Object[] = super.processResponse.apply(this, arguments);
         // adding employee id
         original.forEach((item: Object) => item['EventID'] = ++i);
-        return  original;
+        return original;
     }
 }
 
 let dataManager: DataManager = new DataManager({
-    url: 'https://ej2services.syncfusion.com/production/web-services/api/Schedule',
+    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
     adaptor: new CustomAdaptor
 });
 let scheduleObj: Schedule = new Schedule({
     height: '550px',
-    selectedDate: new Date(2020, 9, 20),
+    selectedDate: new Date(1996, 6, 9),
     readonly: true,
-    eventSettings: { dataSource: dataManager }
+    eventSettings: {
+        dataSource: dataManager,
+        fields: {
+            id: 'Id',
+            subject: { name: 'ShipName' },
+            location: { name: 'ShipCountry' },
+            description: { name: 'ShipAddress' },
+            startTime: { name: 'OrderDate' },
+            endTime: { name: 'RequiredDate' },
+            recurrenceRule: { name: 'ShipRegion' }
+        }
+    }
 });
 scheduleObj.appendTo('#Schedule');
 
