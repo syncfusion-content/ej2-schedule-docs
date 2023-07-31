@@ -9,8 +9,6 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Salesforce Integration
-
 In this topic, we will provide you with a detailed step-by-step guide on how to seamlessly integrate the EJ2 Scheduler component into Salesforce. By integrating it into Salesforce, you can enhance your productivity and streamline your scheduling processes. So, let's dive into the integration process and unlock the full potential of the EJ2 Scheduler component within Salesforce.
 
 ## Prerequisites
