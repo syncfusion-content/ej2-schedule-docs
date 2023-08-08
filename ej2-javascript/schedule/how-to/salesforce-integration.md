@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-In this topic, we will provide you with a detailed step-by-step guide on how to seamlessly integrate the EJ2 Scheduler component into Salesforce. By integrating it into Salesforce, you can enhance your productivity and streamline your scheduling processes. So, let's dive into the integration process and unlock the full potential of the EJ2 Scheduler component within Salesforce.
+This topic provides you with a detailed step-by-step guide on how to seamlessly integrate the EJ2 Scheduler component into Salesforce. By integrating it into Salesforce, you can enhance your productivity and streamline your scheduling processes. So, let's dive into the integration process and unlock the full potential of the EJ2 Scheduler component within Salesforce.
 
 ## Prerequisites
 
@@ -67,17 +67,17 @@ fig 1
 fig 2
 ![Salesforce project (fig 2)](../images/Salesforce-project-fig2.png)
 
-## Create scratch Org 
+## Create scratch organization 
 
-To facilitate development and testing, we will create a scratch org using the following steps. 
+To facilitate development and testing, we will create a scratch organization using the following steps. 
 
-1. Run the following command to create a new scratch org, which will provide a fresh Salesforce environment for development and testing with org id and username as link below image.
+1. Run the following command to create a new scratch organization, which will provide a fresh Salesforce environment for development and testing with organization id and username as link below image.
 
 ```
 sfdx org:create:scratch -f config/project-scratch-def.json 
 ```
 
-![Salesforce Create scratch Org](../images/Salesforce-create-scratch.png)
+![Salesforce create scratch organization](../images/Salesforce-create-scratch.png)
 
 ## Adding Static Resources 
 
@@ -118,7 +118,7 @@ To ensure seamless integration and prevent content security policy issues, follo
 
 ![CSP trusted sites](../images/CSP-trusted-sites.png)
 
-## Creating Data Model for Appointment 
+## Creating data model for appointment 
 
 To begin, navigate to the Object Manager in Salesforce and select Create followed by Custom Object.
 
@@ -420,7 +420,3 @@ To access the integrated EJ2 Scheduler on the home page, follow these steps.
 You can check out the complete working example of this EJ2 Scheduler integration into salesforce on this [GitHub repository](https://github.com/SyncfusionExamples/salesforce-integration-in-ej2-javascript-scheduler) as follows.
 
 This topic has provided a detailed step-by-step guide on how to configure Salesforce, create a Salesforce project, authorize it, add static resources, create a Lightning web component, and display the scheduler on a Lightning page. By following these instructions, you can integrate the EJ2 Scheduler to efficiently manage your events and appointments within Salesforce. 
-
-The Scheduler component is also available in our [Angular](https://www.syncfusion.com/angular-components/angular-scheduler), [React](https://www.syncfusion.com/react-components/react-scheduler), [Vue](https://www.syncfusion.com/vue-components/vue-scheduler), [JavaScript](https://www.syncfusion.com/javascript-ui-controls/js-scheduler), ASP.NET ([Core](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler) and [MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler)), and [Blazor](https://www.syncfusion.com/blazor-components/blazor-scheduler) platforms. Try it out in your platform of choice and enjoy hassle-free slide navigation! 
-
-As always, you can contact us through our [support forums](https://www.syncfusion.com/forums), [support portal](https://support.syncfusion.com/), or [feedback portal](https://www.syncfusion.com/feedback/). We are always happy to assist you!
