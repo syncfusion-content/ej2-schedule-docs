@@ -25,7 +25,7 @@ To begin the integration process, you need to configure Salesforce by following 
 
 [Log in](https://login.salesforce.com/) with salesforce account. 
 
-3.After successful login, search for Dev Hub in the quick find search box and select Dev Hub. In the Dev Hub setup tab, ensure that the **Enable Dev Hub** option is enabled. If it's not enabled, enable it to proceed further.
+After successful login, search for Dev Hub in the quick find search box and select Dev Hub. In the Dev Hub setup tab, ensure that the **Enable Dev Hub** option is enabled. If it's not enabled, enable it to proceed further.
 
 ![Enable Dev Hub](../images/Salesforce-enable-dev-hub.png)
 
@@ -383,7 +383,7 @@ To display the **JavaScript Scheduler** on a Lightning page, follow these steps.
 
 2. Choose **App** Page and click **Next** button. 
 
-![Search Scheduler page](../images/Salesforce-add-lightning-page.png)
+![Search Scheduler page](../images/Salesforce-add-lightning-page.png) 
 
 3. Provide a label name for the app page and click **Next** button. For example, here you can name it `SyncfusionScheduler`. 
 
