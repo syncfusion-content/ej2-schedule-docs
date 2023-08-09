@@ -17,7 +17,7 @@ Before we get started, make sure you have the following prerequisites need to be
 
 * [Salesforce CLI](https://developer.salesforce.com/tools/salesforcecli)
 
-## Configuring Salesforce 
+## Configuring salesforce 
 
 To begin the integration process, we need to configure Salesforce by following these steps.
 
@@ -29,7 +29,7 @@ To begin the integration process, we need to configure Salesforce by following t
 
 ![Enable Dev Hub](../images/Salesforce-enable-dev-hub.png)
 
-## Creating a Salesforce Project
+## Creating a salesforce project
 
 Now that we have Salesforce configured, let's create a [Salesforce project](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm) for our integration. 
 
@@ -79,7 +79,7 @@ sfdx org:create:scratch -f config/project-scratch-def.json
 
 ![Salesforce create scratch organization](../images/Salesforce-create-scratch.png)
 
-## Adding Static Resources 
+## Adding static resources 
 
 To integrate the Syncfusion scripts and styles as static resource files within Salesforce, follow these steps.  
  
@@ -89,7 +89,7 @@ To integrate the Syncfusion scripts and styles as static resource files within S
 sfdx org:open -o <stratch org user name> 
 ```
 
-Replace <scratch org username> with the username of your scratch org, which was generated during the scratch org creation process.  
+Replace <scratch org username> with the username of your scratch organization, which was generated during the scratch organization creation process.  
  
 2. In the Salesforce setup menu, search for Static Resources and click on New in the static resources tab. 
 
@@ -128,7 +128,7 @@ In the custom object section, enter a meaningful label for your custom object. F
 
 ![Salesforce New custom Object](../images/Salesforce-new-custom-object.png)
 
-## Defining Fields and Relationships 
+## Defining fields and relationships 
 
 let's configure the fields and relationships for the SchedulerEvent object. To do so Click on New to create a new field. 
 
@@ -162,7 +162,7 @@ let's configure the fields and relationships for the SchedulerEvent object. To d
 
 ![Salesforce New custom field](../images/Salesforce-custom-field.png)
 
-## Creating a Lightning web component 
+## Creating a lightning web component 
 
 To integrate the EJ2 Scheduler into your Salesforce project, we will create a [Lightning web component](https://developer.salesforce.com/docs/platform/lwc/guide/get-started-introduction.html). Follow these steps. 
 
@@ -319,7 +319,7 @@ export default class Scheduler extends LightningElement {
 } 
 ```
 
-## Creating Apex Class 
+## Creating apex class 
 
 Apex class that facilitates smooth interactions between your Lightning component and the data model. By following these steps, you will be able to fetch and manipulate data from the SchedulerEvent custom object effortlessly. 
 
@@ -349,35 +349,35 @@ public with sharing class SchedulerData {
 } 
 ```
 
-## Pull Scratch Org 
+## Pull scratch organization 
 
-To retrieve the changes made in the scratch org and sync them with your local Salesforce project, use the following command. 
+To retrieve the changes made in the scratch organization and sync them with your local Salesforce project, use the following command. 
 
 ```
 sfdx project:retrieve:start -o <scratch org use name> 
 ```
 
-Replace <scratch org username> with the username of your scratch org.
+Replace <scratch org username> with the username of your scratch organization.
 
 ![Salesforce Pull Scratch](../images/Salesforce-pull-scratch.png)
 
-## Push Scratch Org 
+## Push scratch organization 
 
-To push the changes made in your local Salesforce project to the scratch org, use the following command. 
+To push the changes made in your local Salesforce project to the scratch organization, use the following command. 
 
 ```
 sfdx project:deploy:start -o <scratch org use name> 
 ```
 
-Replace <scratch org username> with the username of your scratch org.
+Replace <scratch org username> with the username of your scratch organization.
 
 ![Salesforce Push Scratch](../images/Salesforce-push-scratch.png)
 
-## Creating Lightning Page 
+## Creating lightning page 
 
 To display the EJ2 Scheduler on a Lightning page, follow these steps. 
 
-1. In your scratch org, search for Lightning App Builder in the quick find setup, select Lightning App Builder and click New. 
+1. In your scratch organization, search for Lightning App Builder in the quick find setup, select Lightning App Builder and click New. 
 
 ![Search Scheduler page](../images/Salesforce-create-lightning-page.png)
 
@@ -404,7 +404,7 @@ rendered inside the content body. Click Save to activate the custom component.
 
 ![Search Scheduler page](../images/Salesforce-activate-custom-component.png)
 
-## Launching Scheduler in Home page 
+## Launching scheduler in home page 
 
 To access the integrated EJ2 Scheduler on the home page, follow these steps. 
 
