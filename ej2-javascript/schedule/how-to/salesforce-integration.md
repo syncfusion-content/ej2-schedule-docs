@@ -31,7 +31,7 @@ To begin the integration process, you need to configure Salesforce by following 
 
 ## Creating a salesforce project
 
-Now that we have Salesforce configured, let's create a [Salesforce project](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm) for our integration. 
+Now you have have Salesforce configured, let's create a [Salesforce project](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm) for our integration. 
 
 In your preferred location, create a base directory for your Salesforce project. For example, you can create a directory named salesforceApp using the following command:
 
