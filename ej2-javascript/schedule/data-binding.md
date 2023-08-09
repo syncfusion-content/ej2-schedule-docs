@@ -408,4 +408,8 @@ We have assigned our custom created Google Calendar url to the DataManager and a
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs7" %}
 {% endif %}
 
+## See Also
+
+[Salesforce Integration](./how-to/salesforce-integration.md)
+
 > You can refer to our [JavaScript Scheduler](https://www.syncfusion.com/javascript-ui-controls/js-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Scheduler example](https://ej2.syncfusion.com/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
