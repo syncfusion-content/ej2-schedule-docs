@@ -54,6 +54,8 @@ The following code example displays an appointment from 9.00 AM to 10.00 AM when
 
 When a time zone is set to Scheduler through `timezone` property, the appointments will be displayed exactly based on the Scheduler timezone regardless of its client timezone. In the following code example, appointments will be displayed based on Eastern Time (UTC -05:00).
 
+>Note: **timezone** property only applicable for the appointment processing and current time indication.
+
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
