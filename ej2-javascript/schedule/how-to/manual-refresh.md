@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Manual refresh in ##Platform_Name## Schedule control
 
-In Scheduler, we can able to refresh the layout manually without re-render the DOM element by using the [`refreshLayout`](../../api/schedule#refreshlayout) public method.  The following example code explains to know how to use the refreshLayout method.
+In Scheduler, we can able to refresh the layout manually without re-render the DOM element by using the [`refreshLayout`](../../api/schedule/#refreshlayout) public method.  The following example code explains to know how to use the refreshLayout method.
 
 {% if page.publishingplatform == "typescript" %}
 
