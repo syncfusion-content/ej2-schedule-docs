@@ -11,14 +11,14 @@ domainurl: ##DomainURL##
 
 # Data binding in ##Platform_Name## Schedule control
 
-The Scheduler uses `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](../api/schedule/eventSettings#datasource) property of Scheduler can be assigned either with the instance of `DataManager` or JavaScript object array collection, as it supports the following two kind of data binding methods:
+The Scheduler uses `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](../api/schedule/eventSettings/#datasource) property of Scheduler can be assigned either with the instance of `DataManager` or JavaScript object array collection, as it supports the following two kind of data binding methods:
 
 * Local data
 * Remote data
 
 ## Binding local data
 
-To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](../api/schedule/eventSettings#datasource) option of the scheduler within the `eventSettings` property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
+To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](../api/schedule/eventSettings/#datasource) option of the scheduler within the `eventSettings` property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -53,7 +53,7 @@ You can also bind different field names to the default event fields as well as i
 
 ## Binding remote data
 
-Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](../api/schedule/eventSettings#datasource) property within `eventSettings`.
+Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](../api/schedule/eventSettings/#datasource) property within `eventSettings`.
 
 ### Using ODataV4Adaptor
 
@@ -216,9 +216,9 @@ To send an additional custom parameter to the server-side post, you need to make
 
 ## Handling failure actions
 
-During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](../api/schedule#actionfailure) event of Scheduler.
+During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](../api/schedule/#actionfailure) event of Scheduler.
 
-The argument passed to the [`actionFailure`](../api/schedule#actionfailure) event contains the error details returned from the server.
+The argument passed to the [`actionFailure`](../api/schedule/#actionfailure) event contains the error details returned from the server.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -247,7 +247,7 @@ The argument passed to the [`actionFailure`](../api/schedule#actionfailure) even
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs6" %}
 {% endif %}
 
-> The [`actionFailure`](../api/schedule#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
+> The [`actionFailure`](../api/schedule/#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
 
 ## Scheduler CRUD actions
 
