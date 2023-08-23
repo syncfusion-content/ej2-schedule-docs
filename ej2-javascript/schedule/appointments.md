@@ -657,7 +657,7 @@ The `eventRendered` event triggers before the appointment renders on the Schedul
 
 ### Using custom CSS class
 
-The customization of events can also be achieved using `cssClass` property of the Scheduler. In the following example, the background of appointments has been changed using the cssClass.
+The customization of events can also be achieved using `cssClass` property of the Scheduler. In the following example, the background of appointments and height of appointments in the Timeline views has been changed using the cssClass.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

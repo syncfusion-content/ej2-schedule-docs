@@ -18,7 +18,12 @@
 
 .custom-class.e-schedule .e-vertical-view .e-all-day-appointment-wrapper .e-appointment,
 .custom-class.e-schedule .e-vertical-view .e-day-wrapper .e-appointment,
-.custom-class.e-schedule .e-month-view .e-appointment{
+.custom-class.e-schedule .e-month-view .e-appointment,
+.custom-class.e-schedule .e-timeline-view .e-appointment {
   background: green;
+}
+
+.custom-class.e-schedule .e-timeline-view .e-appointment {
+  height: 75px;
 }
 /* csslint ignore:end */
