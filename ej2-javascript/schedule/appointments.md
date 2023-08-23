@@ -739,6 +739,9 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/schedule/event-cs33/index.html %}
 {% endhighlight %}
+{% highlight ts tabtitle="datasource.ts" %}
+{% include code-snippet/schedule/event-cs33/datasource.ts %}
+{% endhighlight %}
 {% endtabs %}
           
 {% previewsample "page.domainurl/code-snippet/schedule/event-cs33" %}
