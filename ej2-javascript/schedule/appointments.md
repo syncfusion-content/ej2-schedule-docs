@@ -752,6 +752,8 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler's public method `isSlotAvailable`.
 
+>Note: The existing **isSlotAvailable** method currently focuses on validating appointments within the current view date range. However, it does not extend this availability check to recurrence occurrences outside of the current date range.
+
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/schedule/cell-dimension-cs1/index.ts %}
