@@ -254,6 +254,71 @@ By default, the timezone collections in the editor window have been loaded with 
 {% previewsample "page.domainurl/code-snippet/schedule/editor-window-cs7" %}
 {% endif %}
 
+
+## Customizing event header using template
+The event editor window can be customized header by making use of the `editorHeaderTemplate` option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
+
+In this demo, the editor window header is customized based on the appointment subject field which can be achieved by the `editorHeaderTemplate`.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/schedule/editor-header-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-header-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/schedule/editor-header-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-header-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-cs1" %}
+{% endif %}
+## Customizing event footer using template
+
+The event editor window can be customized footer by making use of the `editorFooterTemplate` option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
+
+In this demo, the customization of the editor window footer is achieved by using the `editorFooterTemplate`.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/schedule/editor-footer-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-footer-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/editor-footer-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/schedule/editor-footer-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-footer-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/editor-footer-cs1" %}
+{% endif %}
+
 ## Customizing event editor using template
 
 The event editor window can be customized by making use of the `editorTemplate` option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
