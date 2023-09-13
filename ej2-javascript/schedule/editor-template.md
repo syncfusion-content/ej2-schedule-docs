@@ -253,6 +253,7 @@ By default, the timezone collections in the editor window have been loaded with 
 
 {% previewsample "page.domainurl/code-snippet/schedule/editor-window-cs7" %}
 {% endif %}
+
 ## Customizing event editor using template
 
 The event editor window can be customized by making use of the `editorTemplate` option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
