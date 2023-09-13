@@ -38,7 +38,6 @@ const scheduleObj: Schedule = new Schedule({
     height: '550px',
     editorHeaderTemplate: '#editor-header',
     editorFooterTemplate: '#editor-footer',
-    showQuickInfo: false,
     eventSettings: { dataSource: data },
     popupOpen: onPopupOpen,
 });

@@ -33,8 +33,6 @@ var scheduleObj = new ej.schedule.Schedule({
     height: '550px',
     editorHeaderTemplate:'#editor-header',
     editorFooterTemplate:'#editor-footer',
-    currentView: 'Week',
-    views: ['Day', 'Week', 'WorkWeek', 'Month', 'Agenda', 'MonthAgenda'],
     eventSettings: { dataSource: data},
     popupOpen: onPopupOpen
 });
@@ -82,7 +80,6 @@ function crudAppointments() {
         const data =
         {
             Subject: subject.value,
-            location: location.value,
             StartTime: startDateTime.value,
             EndTime: endDateTime.value,
             AllDay: allDay.checked
