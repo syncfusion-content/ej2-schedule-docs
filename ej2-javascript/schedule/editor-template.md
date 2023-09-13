@@ -255,68 +255,36 @@ By default, the timezone collections in the editor window have been loaded with 
 {% endif %}
 
 
-## Customizing event header using template
-The event editor window can be customized header by making use of the `editorHeaderTemplate` option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
+## Customizing editor window header and footer using template
+The editor custom header can be customized by using the `editorHeaderTemplate` option, and editor window footer can be customized footer by making use of the `editorFooterTemplate` option. In this scenario, a custom header and footer design is built with the required fields using the script template and its type should be of **text/x-template**.
 
-In this demo, the editor window header is customized based on the appointment subject field which can be achieved by the `editorHeaderTemplate`.
-
-{% if page.publishingplatform == "typescript" %}
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/schedule/editor-header-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/schedule/editor-header-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/schedule/editor-header-cs1" %}
-
-{% elsif page.publishingplatform == "javascript" %}
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/schedule/editor-header-cs1/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/schedule/editor-header-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "page.domainurl/code-snippet/schedule/editor-header-cs1" %}
-{% endif %}
-## Customizing event footer using template
-
-The event editor window can be customized footer by making use of the `editorFooterTemplate` option. Here, the custom window design is built with the required fields using the script template and its type should be of **text/x-template**.
-
-In this demo, the customization of the editor window footer is achieved by using the `editorFooterTemplate`.
+In this demo, the editor custom header is customized based on the appointment subject field which can be achieved by the `editorHeaderTemplate`.Additionally, the `editorFooterTemplate` is employed to handle the functionality for saving, deleting, and canceling actions.
 
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/schedule/editor-footer-cs1/index.ts %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/schedule/editor-footer-cs1/index.html %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/schedule/editor-footer-cs1" %}
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-footer-cs1" %}
 
 {% elsif page.publishingplatform == "javascript" %}
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/schedule/editor-footer-cs1/index.js %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/schedule/editor-footer-cs1/index.html %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/schedule/editor-footer-cs1" %}
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-footer-cs1" %}
 {% endif %}
 
 ## Customizing event editor using template

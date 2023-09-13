@@ -1,40 +1,38 @@
 const today = new Date();
 const data = [{Id: 1,
     Subject: 'Surgery - Andrew',
-    EventType: 'Confirmed',
     StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 0),
-    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 0)
+    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 0),
+    IsAllDay: false
 }, {
     Id: 2,
     Subject: 'Consulting - John',
-    EventType: 'Confirmed',
     StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 0),
-    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 30)
+    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 30),
+    IsAllDay: false
 }, {
     Id: 3,
     Subject: 'Therapy - Robert',
-    EventType: 'Requested',
     StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 30),
-    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 30)
+    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 30),
+    IsAllDay: false
 }, {
     Id: 4,
     Subject: 'Observation - Steven',
-    EventType: 'Confirmed',
     StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 30),
-    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 30)
-
+    EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 30),
+    IsAllDay: false
 }]
 let startDateTime;
 let endDateTime;
 let allDay;
 let subject;
-let location;
 let isEmptyDelete = false;
 var scheduleObj = new ej.schedule.Schedule({
     width: '100%',
     height: '550px',
-    selectedDate: new Date(2017, 10, 1),
-    editorFooterTemplate: '#editor-footer',
+    editorHeaderTemplate:'#editor-header',
+    editorFooterTemplate:'#editor-footer',
     currentView: 'Week',
     views: ['Day', 'Week', 'WorkWeek', 'Month', 'Agenda', 'MonthAgenda'],
     eventSettings: { dataSource: data},
@@ -62,21 +60,12 @@ function onDeleteButtonClick() {
     scheduleObj.closeEditor();
 }
 
-function generateUniqueId() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        const r = Math.random() * 16 | 0;
-        const v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
-}
-
 function onPopupOpen(args) {
     if (args.type === 'Editor') {
         document.getElementById('Save').addEventListener('click', onSaveButtonClick);
         document.getElementById('Cancel').addEventListener('click', onCancelButtonClick);
         document.getElementById('Delete').addEventListener('click', onDeleteButtonClick);
         subject = args.element.querySelector('#Subject');
-        location = args.element.querySelector('#Location');
         startDateTime = args.element.querySelector('#StartTime').ej2_instances[0];
         endDateTime = args.element.querySelector('#EndTime').ej2_instances[0];
         allDay = args.element.querySelector('#IsAllDay');
@@ -90,10 +79,8 @@ function crudAppointments() {
             isEmptyDelete = false;
             return appointments;
         }
-        const uniqueId = generateUniqueId()
         const data =
         {
-            id : uniqueId,
             Subject: subject.value,
             location: location.value,
             StartTime: startDateTime.value,
