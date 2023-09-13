@@ -292,6 +292,7 @@ As we are using our Syncfusion sub-components within our editor using template i
 {% endif %}
 
 ## How to customize header and footer using template
+
 The editor window's header and footer can be enhanced with custom designs using the `editorHeaderTemplate`  and `editorFooterTemplate` options. To achieve this, create a script template that includes the necessary fields. Ensure that the template type is set to **text/x-template**.
 
 In this demo, we customize the editor's header based on the appointment's subject field using the `editorHeaderTemplate`. Additionally, we utilize the `editorFooterTemplate` to manage the functionality for saving, deleting, and canceling actions.
