@@ -22,12 +22,38 @@
     ${if (!Subject)}<div>Create New Event</div>${else}<div>${Subject}</div>${/if}
 </script>
 <script id="editor-footer" type="text/x-template">
-    <div>
-        <button id="Delete" class="e-control e-btn e-primary" data-ripple="true">Delete</button>
-        <button id="Save" class="e-control e-btn e-primary" data-ripple="true">Save</button>
-        <button id="Cancel" class="e-control e-btn e-primary" data-ripple="true">Cancel</button>
+    <div id="verify">
+        <input type="checkbox" id="check-box" value="unchecked">
+        <label id="text">Verify</label>
+    </div>
+    <div id="right-button">
+        <button id="Cancel" class="e-control e-btn e-primary"  data-ripple="true">Cancel</button>
+        <button id="Save" class="e-control e-btn e-primary" disabled data-ripple="true">Save</button>
     </div>
 </script>
+<style>
+    #verify {
+        position: fixed;
+        padding: 0 20px;
+    }
+
+    #text {
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 14px;
+        user-select: none;
+        margin-left: 8px;
+        vertical-align: middle;
+        white-space: normal;
+    }
+
+    #right-button {
+        padding: 0 10px;
+    }
+</style>
 <body>
     <div id="container">
         <div id="Schedule"></div>

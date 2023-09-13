@@ -23,18 +23,20 @@ const data = [{Id: 1,
     EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 30),
     IsAllDay: false
 }]
-let startDateTime;
-let endDateTime;
-let allDay;
-let subject;
-let isEmptyDelete = false;
+var startDateTime;
+var endDateTime;
+var allDay;
+var subject;
 var scheduleObj = new ej.schedule.Schedule({
     width: '100%',
     height: '550px',
-    editorHeaderTemplate:'#editor-header',
-    editorFooterTemplate:'#editor-footer',
-    eventSettings: { dataSource: data},
-    popupOpen: onPopupOpen
+    editorFooterTemplate: '#editor-footer',
+    editorHeaderTemplate: '#editor-header',
+    eventSettings: {
+        dataSource: data,
+        fields: { id: 'Id', subject: { name: 'Subject' }, startTime: { name: 'StartTime' }, endTime: { name: 'EndTime' }, isAllDay: { name: 'IsAllDay' } }
+    },
+    popupOpen: onPopupOpen,
 });
 scheduleObj.appendTo('#Schedule');
 function onSaveButtonClick() {
@@ -49,20 +51,20 @@ function onCancelButtonClick() {
     scheduleObj.closeEditor();
 }
 
-function onDeleteButtonClick() {
-    isEmptyDelete = true;
-    const deleteAppointments = crudAppointments();
-    if (deleteAppointments !== undefined) {
-        scheduleObj.deleteEvent(deleteAppointments, 'Delete');
-    }
-    scheduleObj.closeEditor();
-}
-
 function onPopupOpen(args) {
     if (args.type === 'Editor') {
-        document.getElementById('Save').addEventListener('click', onSaveButtonClick);
+        var saveButton = document.getElementById('Save');
+        var checkBox = document.getElementById('check-box');
+        checkBox.onchange = function () {
+            if (!checkBox.checked) {
+                saveButton.setAttribute('disabled', '');
+            }
+            else {
+                saveButton.removeAttribute('disabled');
+            }
+        };
+        saveButton.addEventListener('click', onSaveButtonClick);
         document.getElementById('Cancel').addEventListener('click', onCancelButtonClick);
-        document.getElementById('Delete').addEventListener('click', onDeleteButtonClick);
         subject = args.element.querySelector('#Subject');
         startDateTime = args.element.querySelector('#StartTime').ej2_instances[0];
         endDateTime = args.element.querySelector('#EndTime').ej2_instances[0];
@@ -73,10 +75,6 @@ function crudAppointments() {
     let appointments = [];
     const activeData = scheduleObj.activeEventData.event ;
     if (scheduleObj.activeEventData.event === undefined) {
-        if (isEmptyDelete) {
-            isEmptyDelete = false;
-            return appointments;
-        }
         const data =
         {
             Subject: subject.value,
