@@ -29,76 +29,53 @@ const data : Record<string, any>[] = [{
     IsAllDay: false
 
 }]
-let startDateTime: HTMLInputElement;
-let endDateTime: HTMLInputElement;
-let allDay: HTMLInputElement;
-let subject: HTMLInputElement;
 const scheduleObj: Schedule = new Schedule({
     width: '100%',
     height: '550px',
     editorFooterTemplate: '#editor-footer',
     editorHeaderTemplate: '#editor-header',
-    eventSettings: { dataSource: data, 
-    fields: {id: 'Id',  subject: { name: 'Subject'}, startTime: { name: 'StartTime' }, endTime: { name: 'EndTime' }, isAllDay: { name: 'IsAllDay' }} },
-    popupOpen: onPopupOpen,
+    eventSettings: { dataSource: data },
+    popupOpen: onPopupOpen
 });
 scheduleObj.appendTo('#Schedule');
-function onSaveButtonClick() {
-    const saveAppointments: Record<string, any> = crudAppointments();
-    if (saveAppointments !== undefined) {
-        scheduleObj.saveEvent(saveAppointments, 'Save');
+
+function onSaveButtonClick(args: PopupOpenEventArgs) {
+    const data: Record<string, any> = {
+        Id: args.data.Id,
+        Subject: (args.element.querySelector('#Subject') as HTMLInputElement).value,
+        StartTime: (args.element.querySelector('#StartTime') as any).ej2_instances[0].value,
+        EndTime: (args.element.querySelector('#EndTime') as any).ej2_instances[0].value,
+        IsAllDay: args.element.querySelector('#IsAllDay' as any).checked
+    };
+    if (args.target.classList.contains('e-appointment')) {
+        scheduleObj.saveEvent(data, 'Save');
+    } else {
+        data.Id = scheduleObj.getEventMaxID(),
+        scheduleObj.addEvent(data);
     }
     scheduleObj.closeEditor();
 }
 
-function onCancelButtonClick() {
-    scheduleObj.closeEditor();
-}
 
 function onPopupOpen(args: PopupOpenEventArgs): void {
     if (args.type === 'Editor') {
-        const saveButton: HTMLElement = document.getElementById('Save') as HTMLInputElement
-        const checkBox: HTMLInputElement = document.getElementById('check-box') as HTMLInputElement;
-        checkBox.onchange = function() {
+        const saveButton: HTMLElement = args.element.querySelector('#Save') as HTMLElement;
+        const cancelButton: HTMLElement = args.element.querySelector('#Cancel') as HTMLElement;
+        const checkBox: HTMLInputElement = args.element.querySelector('#check-box') as HTMLInputElement;
+        checkBox.onchange = () => {
             if (!(checkBox as HTMLInputElement).checked) {
                 saveButton.setAttribute('disabled', '');
             } else {
                 saveButton.removeAttribute('disabled');
             }
-          };
-        saveButton.addEventListener('click', onSaveButtonClick);
-        (document.getElementById('Cancel') as HTMLElement).addEventListener('click', onCancelButtonClick);
-        subject = args.element.querySelector('#Subject') as HTMLInputElement;
-        startDateTime = (args.element.querySelector('#StartTime') as any).ej2_instances[0];
-        endDateTime = (args.element.querySelector('#EndTime') as any).ej2_instances[0];
-        allDay = args.element.querySelector('#IsAllDay') as HTMLInputElement;
-    }
-}
-function crudAppointments(): Record<string, any> {
-    let appointments: Record<string, any> = [];
-    const activeData: Record<string, any> = scheduleObj.activeEventData.event as Record<string, any>;
-    if (scheduleObj.activeEventData.event === undefined) {
-        const data: Record<string, any> =
-        {
-            id: scheduleObj.getEventMaxID(),
-            Subject: subject.value,
-            StartTime: startDateTime.value,
-            EndTime: endDateTime.value,
-            AllDay: allDay.checked
         };
-        scheduleObj.addEvent(data);
-        return appointments ;
-    }
-    for (let i: number = 0; i < scheduleObj.eventsData.length; i++) {
-        if (scheduleObj.eventsData[i].Id === activeData.Id) {
-            scheduleObj.eventsData[i].Subject = subject.value;
-            scheduleObj.eventsData[i].StartTime = startDateTime.value;
-            scheduleObj.eventsData[i].EndTime = endDateTime.value;
-            scheduleObj.eventsData[i].IsAllDay = allDay.checked;
-            return scheduleObj.eventsData[i];
+        saveButton.onclick = () => {
+            onSaveButtonClick(args);
         }
+        cancelButton.onclick = () => {
+            scheduleObj.closeEditor();
+        };
     }
-    return appointments;
 }
 
 

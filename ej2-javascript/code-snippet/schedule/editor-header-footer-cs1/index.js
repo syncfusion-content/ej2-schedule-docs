@@ -23,38 +23,40 @@ const data = [{Id: 1,
     EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 30),
     IsAllDay: false
 }]
-var startDateTime;
-var endDateTime;
-var allDay;
-var subject;
 var scheduleObj = new ej.schedule.Schedule({
     width: '100%',
     height: '550px',
     editorFooterTemplate: '#editor-footer',
     editorHeaderTemplate: '#editor-header',
-    eventSettings: {
-        dataSource: data,
-        fields: { id: 'Id', subject: { name: 'Subject' }, startTime: { name: 'StartTime' }, endTime: { name: 'EndTime' }, isAllDay: { name: 'IsAllDay' } }
-    },
-    popupOpen: onPopupOpen,
+    eventSettings: { dataSource: data },
+    popupOpen: onPopupOpen
 });
 scheduleObj.appendTo('#Schedule');
-function onSaveButtonClick() {
-    const saveAppointments = crudAppointments();
-    if (saveAppointments !== undefined) {
-        scheduleObj.saveEvent(saveAppointments, 'Save');
+
+function onSaveButtonClick(args) {
+    var data = {
+        Id: args.data.Id,
+        Subject: args.element.querySelector('#Subject').value,
+        StartTime: args.element.querySelector('#StartTime').ej2_instances[0].value,
+        EndTime: args.element.querySelector('#EndTime').ej2_instances[0].value,
+        IsAllDay: args.element.querySelector('#IsAllDay').checked
+    };
+    if (args.target.classList.contains('e-appointment')) {
+        scheduleObj.saveEvent(data, 'Save');
+    }
+    else {
+        data.Id = scheduleObj.getEventMaxID(),
+        scheduleObj.addEvent(data);
     }
     scheduleObj.closeEditor();
 }
 
-function onCancelButtonClick() {
-    scheduleObj.closeEditor();
-}
 
 function onPopupOpen(args) {
     if (args.type === 'Editor') {
-        var saveButton = document.getElementById('Save');
-        var checkBox = document.getElementById('check-box');
+        var saveButton = args.element.querySelector('#Save');
+        var cancelButton = args.element.querySelector('#Cancel');
+        var checkBox = args.element.querySelector('#check-box');
         checkBox.onchange = function () {
             if (!checkBox.checked) {
                 saveButton.setAttribute('disabled', '');
@@ -63,38 +65,12 @@ function onPopupOpen(args) {
                 saveButton.removeAttribute('disabled');
             }
         };
-        saveButton.addEventListener('click', onSaveButtonClick);
-        document.getElementById('Cancel').addEventListener('click', onCancelButtonClick);
-        subject = args.element.querySelector('#Subject');
-        startDateTime = args.element.querySelector('#StartTime').ej2_instances[0];
-        endDateTime = args.element.querySelector('#EndTime').ej2_instances[0];
-        allDay = args.element.querySelector('#IsAllDay');
-    }
-}
-function crudAppointments() {
-    let appointments = [];
-    const activeData = scheduleObj.activeEventData.event ;
-    if (scheduleObj.activeEventData.event === undefined) {
-        const data =
-        {
-            Subject: subject.value,
-            StartTime: startDateTime.value,
-            EndTime: endDateTime.value,
-            AllDay: allDay.checked
+        saveButton.onclick = function () {
+            onSaveButtonClick(args);
         };
-        scheduleObj.addEvent(data);
-        return appointments ;
+        cancelButton.onclick = function () {
+            scheduleObj.closeEditor();
+        };
     }
-    for (let i = 0; i < scheduleObj.eventsData.length; i++) {
-        if (scheduleObj.eventsData[i].Id === activeData.Id) {
-            scheduleObj.eventsData[i].Subject = subject.value;
-            scheduleObj.eventsData[i].Subject = location.value;
-            scheduleObj.eventsData[i].StartTime = startDateTime.value;
-            scheduleObj.eventsData[i].EndTime = endDateTime.value;
-            scheduleObj.eventsData[i].IsAllDay = allDay.checked;
-            return scheduleObj.eventsData[i];
-        }
-    }
-    return appointments;
 }
 
