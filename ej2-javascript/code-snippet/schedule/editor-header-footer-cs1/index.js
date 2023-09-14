@@ -45,7 +45,7 @@ function onSaveButtonClick(args) {
         scheduleObj.saveEvent(data, 'Save');
     }
     else {
-        data.Id = scheduleObj.getEventMaxID(),
+        data.Id = scheduleObj.getEventMaxID();
         scheduleObj.addEvent(data);
     }
     scheduleObj.closeEditor();
