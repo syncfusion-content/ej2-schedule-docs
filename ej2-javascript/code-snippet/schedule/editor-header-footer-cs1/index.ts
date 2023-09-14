@@ -45,7 +45,7 @@ function onSaveButtonClick(args: PopupOpenEventArgs) {
         Subject: (args.element.querySelector('#Subject') as HTMLInputElement).value,
         StartTime: (args.element.querySelector('#StartTime') as any).ej2_instances[0].value,
         EndTime: (args.element.querySelector('#EndTime') as any).ej2_instances[0].value,
-        IsAllDay: args.element.querySelector('#IsAllDay' as any).checked
+        IsAllDay: (args.element.querySelector('#IsAllDay') as HTMLInputElement).checked
     };
     if (args.target.classList.contains('e-appointment')) {
         scheduleObj.saveEvent(data, 'Save');
