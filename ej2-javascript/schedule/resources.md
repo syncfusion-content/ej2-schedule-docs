@@ -834,7 +834,7 @@ The lazy loading feature provides a convenient way to efficiently load resource 
 
 When you enable this feature, the Scheduler becomes capable of fetching events from remote services only for the current view port alone to optimize the data retrieval. The remaining appointment data is fetched form the server on-demand based on currently rendered view port resources as you scroll's through the scheduler content.
 
-To enable this feature, you have to set the [`enableLazyLoading`](../api/schedule/viewsModel/#enableLazyLoading) property to `true` within the view specific settings.
+To enable this feature, you have to set the [`enableLazyLoading`](../api/schedule/viewsModel/#enablelazyloading) property to `true` within the view specific settings.
 
 {% if page.publishingplatform == "typescript" %}
 
