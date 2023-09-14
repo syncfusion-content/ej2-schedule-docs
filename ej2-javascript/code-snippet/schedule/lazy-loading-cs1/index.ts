@@ -1,9 +1,9 @@
 
 
-import { Schedule, TimelineViews, TimelineMonth, TimelineYear } from '@syncfusion/ej2-schedule';
+import { Schedule, TimelineMonth } from '@syncfusion/ej2-schedule';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 
-Schedule.Inject(TimelineViews, TimelineMonth, TimelineYear);
+Schedule.Inject(TimelineMonth);
 
 let resourceData: Object[] = generateResourceData(1, 1000, 'Resource');
 let dataManager: DataManager = new DataManager({
@@ -15,7 +15,8 @@ let scheduleObj: Schedule = new Schedule({
     height: '550px', width: '100%',
     currentView: 'TimelineMonth',
     views: [
-        { option: 'TimelineMonth', enableLazyLoading: true }    ],
+        { option: 'TimelineMonth', enableLazyLoading: true }
+    ],
     group: {
         resources: ['Resources']
     },
