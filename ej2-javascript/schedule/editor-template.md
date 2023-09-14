@@ -295,7 +295,7 @@ As we are using our Syncfusion sub-components within our editor using template i
 
 The editor window's header and footer can be enhanced with custom designs using the `editorHeaderTemplate`  and `editorFooterTemplate` options. To achieve this, create a script template that includes the necessary fields. Ensure that the template type is set to **text/x-template**.
 
-In this demo, we customize the editor's header based on the appointment's subject field using the `editorHeaderTemplate`. Additionally, we utilize the `editorFooterTemplate` to manage the functionality for saving, and canceling and verify actions. If the check box is checked, the save button is enabled, if it is unchecked, the save button is disabled.
+In this demo, we tailor the editor's header according to the appointment's subject field using the `editorHeaderTemplate`. Furthermore, we make use of the `editorFooterTemplate` to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
 
 {% if page.publishingplatform == "typescript" %}
 
