@@ -50,7 +50,7 @@ function onSaveButtonClick(args: PopupOpenEventArgs) {
     if (args.target.classList.contains('e-appointment')) {
         scheduleObj.saveEvent(data, 'Save');
     } else {
-        data.Id = scheduleObj.getEventMaxID(),
+        data.Id = scheduleObj.getEventMaxID();
         scheduleObj.addEvent(data);
     }
     scheduleObj.closeEditor();
