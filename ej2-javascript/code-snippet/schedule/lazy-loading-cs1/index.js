@@ -9,6 +9,7 @@ var scheduleObj = new ej.schedule.Schedule({
     height: '550px',
     width: '100%',
     currentView: 'TimelineMonth',
+    readonly: true,
     views: [{
         option: 'TimelineMonth',
         enableLazyLoading: true

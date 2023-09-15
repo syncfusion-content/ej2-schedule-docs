@@ -14,6 +14,7 @@ let dataManager: DataManager = new DataManager({
 let scheduleObj: Schedule = new Schedule({
     height: '550px', width: '100%',
     currentView: 'TimelineMonth',
+    readonly: true,
     views: [
         { option: 'TimelineMonth', enableLazyLoading: true }
     ],
