@@ -291,6 +291,40 @@ As we are using our Syncfusion sub-components within our editor using template i
 {% previewsample "page.domainurl/code-snippet/schedule/editor-cs1" %}
 {% endif %}
 
+## How to customize header and footer using template
+
+The editor window's header and footer can be enhanced with custom designs using the [`editorHeaderTemplate`](../api/schedule/#editorheadertemplate) and [`editorFooterTemplate`](../api/schedule/#editorfootertemplate) options. To achieve this, create a script template that includes the necessary fields. Ensure that the template type is set to **text/x-template**.
+
+In this demo, we tailor the editor's header according to the appointment's subject field using the 
+[`editorHeaderTemplate`](../api/schedule/#editorheadertemplate). Furthermore, we make use of the [`editorFooterTemplate`](../api/schedule/#editorfootertemplate) to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-footer-cs1" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/editor-header-footer-cs1" %}
+{% endif %}
+
 ### How to add resource options within editor template
 
 The resource field can be added within editor template with multiselect control for allow multiple resources.
