@@ -59,13 +59,15 @@ sfdx org:login:web -d
 
 ![Salesforce Authorization](../images/Salesforce-authorization.png)
 
-Open the `sfdx-project.json` file located in `salesforceApp/scheduler-salesforce-app` and update the `sfdcLoginUrl` with the domain URL of your Salesforce account as shown in image (fig 2). You can obtain the domain URL from the `My Domain` setup tab in Salesforce as shown in image (fig 1). 
+Open the `sfdx-project.json` file located in `salesforceApp/scheduler-salesforce-app` and update the `sfdcLoginUrl` with the domain URL of your Salesforce account as shown in image. You can obtain the domain URL from the `My Domain` setup tab in Salesforce as shown in image. 
 
-fig 1
 ![Salesforce project (fig 1)](../images/Salesforce-project-fig1.png)
 
-fig 2
+You can obtain the domain URL from the `My Domain` setup tab in Salesforce as shown in above image.
+
 ![Salesforce project (fig 2)](../images/Salesforce-project-fig2.png)
+
+Domain URL of your Salesforce account as shown in above image. 
 
 ## Create scratch organization 
 
