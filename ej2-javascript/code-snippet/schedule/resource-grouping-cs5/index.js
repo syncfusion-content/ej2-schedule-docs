@@ -11,10 +11,10 @@ var scheduleObj = new ej.schedule.Schedule({
         field: 'RoomId', title: 'Room',
         name: 'Rooms', allowMultiple: false,
         dataSource: [
-            { RoomText: 'ROOM 1', Id: 1, RoomColor: '#cb6bb2' },
+            { RoomText: 'ROOM 1', Id: 1, RoomColor: '#cb6bb2', IsExpand: false },
             { RoomText: 'ROOM 2', Id: 2, RoomColor: '#56ca85' }
             ],
-            textField: 'RoomText', idField: 'Id', colorField: 'RoomColor'
+            textField: 'RoomText', idField: 'Id', colorField: 'RoomColor', expandedField: 'IsExpand'
         }, {
         field: 'OwnerId', title: 'Owner',
         name: 'Owners', allowMultiple: true,
