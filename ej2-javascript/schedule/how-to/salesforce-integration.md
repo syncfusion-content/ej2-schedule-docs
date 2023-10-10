@@ -9,9 +9,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Salesforce Integration in EJ2 JavaScript Scheduler Component  
+# Salesforce integration in EJ2 JavaScript Scheduler control 
 
-This topic provides you with a detailed step-by-step guide on how to seamlessly integrate the [**JavaScript Scheduler**](https://www.syncfusion.com/javascript-ui-controls/js-scheduler) component into Salesforce. By integrating it into Salesforce, you can enhance your productivity and streamline your scheduling processes.
+This topic provides you with a detailed step-by-step guide on how to integrate the [**JavaScript Scheduler**](https://www.syncfusion.com/javascript-ui-controls/js-scheduler) component into Salesforce. By integrating it into Salesforce, you can enhance your productivity and streamline your scheduling processes.
 
 ## Prerequisites
 
@@ -101,7 +101,7 @@ In the salesforce setup menu, search for `Static Resources` and click on **New**
 
 ![Salesforce Setup menu](../images/Salesforce-setup-menu.png)
 
-Load the Syncfusion scripts and styles as static files in a zip format, which you can obtain from the [CDN](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start#using-cdn-link-for-scripts-and-styles).
+Load the Syncfusion scripts and styles as static files in a zip format, which you can obtain from the [CDN](https://ej2.syncfusion.com/javascript/documentation/getting-started/quick-start#using-cdn-link-for-scripts-and-styles) or [CRG](https://crg.syncfusion.com/).
 
 In the static resource tab, provide a name for the static resource files, upload the zip file, and change the cache control to `Public`. Click **Save** button to add the static resources to your salesforce project.
 
@@ -109,7 +109,7 @@ In the static resource tab, provide a name for the static resource files, upload
 
 ## Adding CSP trusted sites 
 
-To ensure seamless integration and prevent content security policy issues, follow these steps. 
+To ensure integration and prevent content security policy issues, follow these steps. 
 
 In the salesforce setup menu, search for `CSP Trusted Sites` and click New Trusted Site button.
 
