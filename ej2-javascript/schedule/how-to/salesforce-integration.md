@@ -421,3 +421,5 @@ Click on the app launcher icon in salesforce and Search for `SyncfusionScheduler
 Click on the `SyncfusionScheduler` app, and the scheduler will load on the home page.
 
 ![Click Scheduler page](../images/Salesforce-click-scheduler.png)
+
+You can download Salesforce integration sample from [GitHub](https://github.com/SyncfusionExamples/salesforce-integration-in-ej2-javascript-scheduler)
