@@ -1,5 +1,5 @@
-var calendarId = '5105trob9dasha31vuqek6qgp0@group.calendar.google.com';
-var publicKey = 'AIzaSyD76zjMDsL_jkenM5AAnNsORypS1Icuqxg';
+var calendarId = 'en.usa%23holiday@group.v.calendar.google.com';
+var publicKey = 'AIzaSyBgbX_tgmVanBP4yafDPPXxWr70sjbKAXM';
 var dataManager = new ej.data.DataManager({
     url: 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + publicKey,
     adaptor: new ej.data.WebApiAdaptor(),
@@ -7,9 +7,10 @@ var dataManager = new ej.data.DataManager({
 });
 var scheduleObj = new ej.schedule.Schedule({
     height: '550px',
-    selectedDate: new Date(2018, 10, 14),
     eventSettings: { dataSource: dataManager },
     readonly: true,
+    currentView: 'Month',
+    timezone: 'UTC',
     dataBinding: function (e) {
         var items = e.result.items;
         var scheduleData = [];
