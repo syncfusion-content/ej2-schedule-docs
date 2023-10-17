@@ -134,3 +134,23 @@ var scheduleObj = new ej.schedule.Schedule({
 scheduleObj.appendTo('#Schedule');
 
 ```
+
+## Getting instance of the Scheduler component
+
+User can access the component instance from the component element through the variable where you are initializing the Schedule component(scheduleObj) or by using the ej2_instances property as shown below.
+
+```javascript
+
+var scheduleObj = new ej.schedule.Schedule({
+    .
+    .
+  cellClick: onClick,
+});
+
+scheduleObj.appendTo('#Schedule');
+
+function onClick(args) {
+    let scheduleInstance = document.querySelector('.e-schedule').ej2_instances[0];  
+}
+
+```
