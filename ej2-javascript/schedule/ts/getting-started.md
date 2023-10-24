@@ -37,15 +37,23 @@ The following list of dependencies are required to use the Schedule component in
 
 Open the command prompt from the required directory, and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
 
-```
-    git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
 
 After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
 
-```
-    cd ej2-quickstart
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion JavaScript packages
 
@@ -53,12 +61,13 @@ Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com]
 
 The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
 
-```
-    npm install
-```
-![ej2 typescript seed local setup](images/local-setup.png)
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
 
-> To learn more about the individual packages and different ways to install them, refer [here](https://ej2.syncfusion.com/documentation/installation-and-upgrade/installation/).
+npm install
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import the Syncfusion CSS styles
 
@@ -66,9 +75,13 @@ Syncfusion JavaScript controls come with [built-in themes](https://ej2.syncfusio
 
 The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
 
-```
-  @import "../../node_modules/@syncfusion/ej2/material.css";
-```
+{% tabs %}
+{% highlight css tabtitle="style.css" %}
+
+@import "../../node_modules/@syncfusion/ej2/material.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 > You can check out the [themes](https://ej2.syncfusion.com/documentation/appearance/theme/) section to know more about built-in themes and CSS reference for individual controls.
 
@@ -84,11 +97,15 @@ Each view types available in Scheduler are maintained as individual modules and 
 
 All the above-mentioned modules can be injected into Scheduler using the `Schedule.Inject` method within the app.ts file.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
 
 Schedule.Inject(Day, Week, WorkWeek, Month, Agenda);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Initialize the Schedule
 
@@ -96,7 +113,9 @@ Add the HTML div tag defined with an `id` attribute in your `index.html` file, w
 
 `[src/index.html]`
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,25 +130,35 @@ Add the HTML div tag defined with an `id` attribute in your `index.html` file, w
     <div id="Schedule"></div>
 </body>
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Import the Scheduler component to your `app.ts` file as shown below, and initialize it to the element defined with an id `Schedule` in the `index.html` file.
 
 `[src/app/app.ts]`
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
 
 Schedule.Inject(Day, Week, WorkWeek, Month, Agenda);
 let scheduleObj: Schedule = new Schedule();
 scheduleObj.appendTo('#Schedule');
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, run the application in the browser using the following command.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm start
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will display the empty Scheduler.
 
@@ -137,7 +166,9 @@ The output will display the empty Scheduler.
 
 To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the `dataSource` property available within the `eventSettings` option. To define any appointments, start and end time fields are mandatory. In the following example, you can see the appointment defined with default fields such as Id, Subject, StartTime and EndTime.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
 
 Schedule.Inject(Day, Week, WorkWeek, Month, Agenda);
@@ -154,11 +185,15 @@ let scheduleObj: Schedule = new Schedule({
     }
 });
 scheduleObj.appendTo('#Schedule');
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 You can also provide different names to these default fields, for which the custom names of those fields must be mapped appropriately within `fields` property as shown below.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
 
 let data: object [] = [{
@@ -184,7 +219,9 @@ let scheduleObj: Schedule = new Schedule({
     }
 });
 scheduleObj.appendTo('#Schedule');
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The other fields available in Scheduler can be referred from [here](./appointments#event-fields).
 
@@ -192,7 +229,9 @@ The other fields available in Scheduler can be referred from [here](./appointmen
 
 Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the `selectedDate` property.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
 
 Schedule.Inject(Day, Week, WorkWeek, Month, Agenda);
@@ -202,7 +241,9 @@ let scheduleObj: Schedule = new Schedule({
     }
 });
 scheduleObj.appendTo('#Schedule');
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Setting view
 
@@ -221,7 +262,9 @@ Scheduler displays `Week` view by default. To change the current view, define th
 * TimelineMonth
 * TimelineYear
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Schedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-schedule';
 
 Schedule.Inject(Day, Week, WorkWeek, Month, Agenda);
@@ -232,7 +275,9 @@ let scheduleObj: Schedule = new Schedule({
     }
 });
 scheduleObj.appendTo('#Schedule');
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Individual view customization
 
@@ -241,9 +286,13 @@ This can be achieved by defining views property to accept the array of object ty
 
 Now, run the application in the browser using the following command.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm start
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will display the Scheduler with the specified view configuration.
 
