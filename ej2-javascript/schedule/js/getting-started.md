@@ -242,7 +242,7 @@ var scheduleObj = new ej.schedule.Schedule({
             subject: 'Meeting',
             startTime: new Date(2018, 1, 15, 10, 0),
             endTime: new Date(2018, 1, 15, 12, 30)
-        }];
+        }]
     }
 });
 scheduleObj.appendTo('#Schedule');
@@ -287,7 +287,6 @@ Scheduler usually displays the system date as its current date. To change the cu
 var scheduleObj = new ej.schedule.Schedule({
     height: '550px',
     selectedDate: new Date(2018, 1, 15)
-    }
 });
 scheduleObj.appendTo('#Schedule');
 ```
