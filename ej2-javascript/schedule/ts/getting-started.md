@@ -198,7 +198,7 @@ let scheduleObj: Schedule = new Schedule({
             subject: 'Meeting',
             startTime: new Date(2018, 1, 15, 10, 0),
             endTime: new Date(2018, 1, 15, 12, 30)
-        }];
+        }]
     }
 });
 scheduleObj.appendTo('#Schedule');
@@ -255,7 +255,6 @@ Schedule.Inject(Day, Week, WorkWeek, Month, Agenda);
 let scheduleObj: Schedule = new Schedule({
     height: '550px',
     selectedDate: new Date(2018, 1, 15)
-    }
 });
 scheduleObj.appendTo('#Schedule');
 
@@ -289,7 +288,6 @@ let scheduleObj: Schedule = new Schedule({
     height: '550px',
     selectedDate: new Date(2018, 1, 15),
     currentView: 'Month'
-    }
 });
 scheduleObj.appendTo('#Schedule');
 
