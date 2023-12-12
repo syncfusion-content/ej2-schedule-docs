@@ -582,6 +582,39 @@ Timeline Year view supports Auto row height. When the feature `rowAutoHeight` is
 {% previewsample "page.domainurl/code-snippet/schedule/view-cs16" %}
 {% endif %}
 
+#### Control number of events displayed in a single row
+
+By default, you can view single appointment on each day cell. If you have more than one appointment in a day, the `+ more` text indicator will be available on that cell, clicking on which will allows you to view the hidden appointments of a day. You can decide how many appointments can render on a day based on your Schedule and Month cell height using `maxEventsPerRow` property within views property view options. whereas its default value is 1. The `maxEventsPerRow` property is only applicable for month, timeline, and timeline year views.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/schedule/view-cs19/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/view-cs19/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/view-cs19" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/schedule/view-cs19/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/schedule/view-cs19/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/schedule/view-cs19" %}
+{% endif %}
+
+> The property `maxEventsPerRow` will be applicable only when EnableAutoRowHeight feature is disabled in the Schedule.
+
 ## Extending view intervals
 
 It is possible to customize the display of default number of days on different Scheduler view modes. For example, a day view can be extended to display 3 days by setting the `interval` option as 3 for the `Day` option within the `views` property as depicted in the following code example. In the same way, you can also display 2 weeks by setting interval 2 for the `Week` option.
