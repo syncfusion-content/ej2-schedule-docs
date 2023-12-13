@@ -147,7 +147,7 @@ By default, with the feature `rowAutoHeight`, there will be a space in the botto
 
 ## How to limit maximum number of events to display
 
-To limit the maximum number of events displayed in a cell, you can use the `maxEventsPerRow` property within the views property view options. The `maxEventsPerRow` property is only applicable for month, timeline month, and timeline year views.
+By default, the scheduler will render the overlapping events based on the start and end time. Now we can customize the number of events displayed in a cell by using the `maxEventsPerRow` property grouped under the `views` property. The `maxEventsPerRow` property is only applicable for month, timeline month, and timeline year views. The following code example shows how to limit number of events displayed in a cell as follows.
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -176,6 +176,6 @@ To limit the maximum number of events displayed in a cell, you can use the `maxE
 {% previewsample "page.domainurl/code-snippet/schedule/view-cs19" %}
 {% endif %}
 
-> The property `maxEventsPerRow` will be applicable only when EnableAutoRowHeight feature is disabled in the Schedule.
+> The property `maxEventsPerRow` will be applicable only when `rowAutoHeight` feature is disabled in the Scheduler.
 
 > You can refer to our [JavaScript Scheduler](https://www.syncfusion.com/javascript-ui-controls/js-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [JavaScript Scheduler example](https://ej2.syncfusion.com/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
