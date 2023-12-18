@@ -1,123 +1,190 @@
 export let scheduleData: Object[] = [
     {
         Id: 1,
-        Subject: 'Explosion of Betelgeuse Star',
-        StartTime: new Date(2024, 1, 11, 9, 30),
-        EndTime: new Date(2024, 1, 11, 11, 0),
-        CategoryColor: '#1aaa55'
+        Subject: 'Paris',
+        StartTime: new Date(2023, 9, 29, 10, 0),
+        EndTime: new Date(2023, 9, 29, 11, 30),
+        IsAllDay: false,
+        OwnerId: 1
     }, {
         Id: 2,
-        Subject: 'Thule Air Crash Report',
-        StartTime: new Date(2024, 1, 12, 12, 0),
-        EndTime: new Date(2024, 1, 12, 14, 0),
-        CategoryColor: '#357cd2'
+        Subject: 'Meeting - 1',
+        StartTime: new Date(2023, 9, 30, 10, 0),
+        EndTime: new Date(2023, 9, 30, 12, 30),
+        IsAllDay: false,
+        OwnerId: 2
     }, {
         Id: 3,
-        Subject: 'Blue Moon Eclipse',
-        StartTime: new Date(2024, 1, 13, 9, 30),
-        EndTime: new Date(2024, 1, 13, 11, 0),
-        CategoryColor: '#7fa900'
+        Subject: 'Meeting - 2',
+        StartTime: new Date(2023, 9, 30, 11, 0),
+        EndTime: new Date(2023, 9, 30, 14, 30),
+        IsAllDay: false,
+        OwnerId: 3
     }, {
         Id: 4,
-        Subject: 'Meteor Showers in 2024',
-        StartTime: new Date(2024, 1, 14, 13, 0),
-        EndTime: new Date(2024, 1, 14, 14, 30),
-        CategoryColor: '#ea7a57'
+        StartTime: new Date(2023, 9, 31),
+        EndTime: new Date(2023, 10, 1),
+        IsAllDay: true,
+        OwnerId: 1
     }, {
         Id: 5,
-        Subject: 'Milky Way as Melting pot',
-        StartTime: new Date(2024, 1, 15, 12, 0),
-        EndTime: new Date(2024, 1, 15, 14, 0),
-        CategoryColor: '#00bdae'
+        Subject: 'Conference - 2',
+        StartTime: new Date(2023, 9, 31, 22, 0),
+        EndTime: new Date(2023, 10, 1, 0, 0),
+        IsAllDay: false,
+        OwnerId: 2
     }, {
         Id: 6,
-        Subject: 'Mysteries of Bermuda Triangle',
-        StartTime: new Date(2024, 1, 15, 9, 30),
-        EndTime: new Date(2024, 1, 15, 11, 0),
-        CategoryColor: '#f57f17'
+        Subject: 'Conference - 3',
+        StartTime: new Date(2023, 10, 1, 9, 30),
+        EndTime: new Date(2023, 10, 1, 11, 45),
+        IsAllDay: false,
+        OwnerId: 3
     }, {
         Id: 7,
-        Subject: 'Glaciers and Snowflakes',
-        StartTime: new Date(2024, 1, 16, 11, 0),
-        EndTime: new Date(2024, 1, 16, 12, 30),
-        CategoryColor: '#1aaa55'
+        Subject: 'Conference - 4',
+        StartTime: new Date(2023, 10, 1, 10, 30),
+        EndTime: new Date(2023, 10, 1, 12, 45),
+        IsAllDay: false,
+        OwnerId: 1
     }, {
         Id: 8,
-        Subject: 'Life on Mars',
-        StartTime: new Date(2024, 1, 17, 9, 0),
-        EndTime: new Date(2024, 1, 17, 10, 0),
-        CategoryColor: '#357cd2'
+        Subject: 'Travelling',
+        StartTime: new Date(2023, 10, 1, 11, 30),
+        EndTime: new Date(2023, 10, 1, 13, 45),
+        IsAllDay: false,
+        OwnerId: 2
     }, {
         Id: 9,
-        Subject: 'Alien Civilization',
-        StartTime: new Date(2024, 1, 19, 11, 0),
-        EndTime: new Date(2024, 1, 19, 13, 0),
-        CategoryColor: '#7fa900'
+        Subject: 'Vacation',
+        StartTime: new Date(2023, 10, 2, 10, 0),
+        EndTime: new Date(2023, 10, 2, 12, 30),
+        IsAllDay: false,
+        OwnerId: 3
     }, {
         Id: 10,
-        Subject: 'Wildlife Galleries',
-        StartTime: new Date(2024, 1, 21, 11, 0),
-        EndTime: new Date(2024, 1, 21, 13, 0),
-        CategoryColor: '#ea7a57'
+        Subject: 'Conference',
+        StartTime: new Date(2023, 10, 2, 15, 30),
+        EndTime: new Date(2023, 10, 2, 18, 45),
+        IsAllDay: false,
+        OwnerId: 1
     }, {
         Id: 11,
-        Subject: 'Best Photography 2024',
-        StartTime: new Date(2024, 1, 22, 9, 30),
-        EndTime: new Date(2024, 1, 22, 11, 0),
-        CategoryColor: '#00bdae'
+        Subject: 'Vacation',
+        StartTime: new Date(2023, 10, 3, 10, 15),
+        EndTime: new Date(2023, 10, 3, 14, 45),
+        IsAllDay: false,
+        OwnerId: 2
     }, {
         Id: 12,
-        Subject: 'Smarter Puppies',
-        StartTime: new Date(2024, 1, 9, 10, 0),
-        EndTime: new Date(2024, 1, 9, 11, 30),
-        CategoryColor: '#f57f17'
+        Subject: 'Conference',
+        StartTime: new Date(2023, 10, 4, 9, 30),
+        EndTime: new Date(2023, 10, 5, 5, 45),
+        IsAllDay: false,
+        OwnerId: 3
     }, {
         Id: 13,
-        Subject: 'Myths of Andromeda Galaxy',
-        StartTime: new Date(2024, 1, 7, 10, 30),
-        EndTime: new Date(2024, 1, 7, 12, 30),
-        CategoryColor: '#1aaa55'
+        StartTime: new Date(2023, 10, 5, 10, 0),
+        EndTime: new Date(2023, 10, 5, 11, 30),
+        IsAllDay: false,
+        OwnerId: 1
     }, {
         Id: 14,
-        Subject: 'Aliens vs Humans',
-        StartTime: new Date(2024, 1, 5, 10, 0),
-        EndTime: new Date(2024, 1, 5, 11, 30),
-        CategoryColor: '#357cd2'
+        Subject: 'Same Time',
+        StartTime: new Date(2023, 10, 5, 10, 0),
+        EndTime: new Date(2023, 10, 5, 11, 30),
+        IsAllDay: false,
+        OwnerId: 2
     }, {
         Id: 15,
-        Subject: 'Facts of Humming Birds',
-        StartTime: new Date(2024, 1, 20, 9, 30),
-        EndTime: new Date(2024, 1, 20, 11, 0),
-        CategoryColor: '#7fa900'
+        Subject: 'Same Time',
+        StartTime: new Date(2023, 10, 5, 10, 0),
+        EndTime: new Date(2023, 10, 5, 11, 30),
+        IsAllDay: false,
+        OwnerId: 3
     }, {
         Id: 16,
-        Subject: 'Sky Gazers',
-        StartTime: new Date(2024, 1, 23, 11, 0),
-        EndTime: new Date(2024, 1, 23, 13, 0),
-        CategoryColor: '#ea7a57'
+        Subject: 'Same Time',
+        StartTime: new Date(2023, 10, 5, 10, 0),
+        EndTime: new Date(2023, 10, 5, 11, 30),
+        IsAllDay: false,
+        OwnerId: 1
     }, {
         Id: 17,
-        Subject: 'The Cycle of Seasons',
-        StartTime: new Date(2024, 1, 12, 5, 30),
-        EndTime: new Date(2024, 1, 12, 7, 30),
-        CategoryColor: '#00bdae'
+        Subject: 'Same Time',
+        StartTime: new Date(2023, 10, 5, 10, 0),
+        EndTime: new Date(2023, 10, 5, 11, 30),
+        IsAllDay: false,
+        OwnerId: 2
     }, {
         Id: 18,
-        Subject: 'Space Galaxies and Planets',
-        StartTime: new Date(2024, 1, 12, 17, 0),
-        EndTime: new Date(2024, 1, 12, 18, 30),
-        CategoryColor: '#f57f17'
+        Subject: 'Same Time',
+        StartTime: new Date(2023, 10, 5, 10, 0),
+        EndTime: new Date(2023, 10, 5, 11, 30),
+        IsAllDay: false,
+        OwnerId: 3
     }, {
         Id: 19,
-        Subject: 'Lifecycle of Bumblebee',
-        StartTime: new Date(2024, 1, 15, 6, 0),
-        EndTime: new Date(2024, 1, 15, 7, 30),
-        CategoryColor: '#7fa900'
+        Subject: 'Meeting - 1',
+        StartTime: new Date(2023, 10, 6),
+        EndTime: new Date(2023, 10, 7),
+        IsAllDay: true,
+        OwnerId: 1
     }, {
         Id: 20,
-        Subject: 'Sky Gazers',
-        StartTime: new Date(2024, 1, 15, 16, 0),
-        EndTime: new Date(2024, 1, 15, 18, 0),
-        CategoryColor: '#ea7a57'
+        Subject: 'Meeting - 2',
+        StartTime: new Date(2023, 10, 6, 11, 0),
+        EndTime: new Date(2023, 10, 6, 14, 30),
+        IsAllDay: false,
+        OwnerId: 3
+    }, {
+        Id: 21,
+        Subject: 'Conference - 1',
+        StartTime: new Date(2023, 10, 7, 22, 0),
+        EndTime: new Date(2023, 10, 8, 20, 0),
+        IsAllDay: true,
+        OwnerId: 2
+    }, {
+        Id: 22,
+        Subject: 'Conference - 2',
+        StartTime: new Date(2023, 10, 7, 22, 0),
+        EndTime: new Date(2023, 10, 14, 23, 0),
+        IsAllDay: false,
+        OwnerId: 1
+    }, {
+        Id: 23,
+        Subject: 'Conference - 3',
+        StartTime: new Date(2023, 10, 8, 9, 30),
+        EndTime: new Date(2023, 10, 9, 11, 45),
+        IsAllDay: true,
+        OwnerId: 2
+    }, {
+        Id: 24,
+        Subject: 'Conference - 3 - A',
+        StartTime: new Date(2023, 10, 8, 9, 30),
+        EndTime: new Date(2023, 10, 8, 10, 0),
+        IsAllDay: true,
+        OwnerId: 3
+    }, {
+        Id: 25,
+        Subject: 'Conference - 3 - B',
+        StartTime: new Date(2023, 10, 8, 10, 0),
+        EndTime: new Date(2023, 10, 8, 10, 30),
+        IsAllDay: false,
+        OwnerId: 1
+    }, {
+        Id: 26,
+        Subject: 'Conference - 4',
+        StartTime: new Date(2023, 10, 8, 10, 30),
+        EndTime: new Date(2023, 10, 8, 12, 45),
+        IsAllDay: false,
+        OwnerId: 2
+    }, {
+        Id: 27,
+        Subject: 'Travelling',
+        StartTime: new Date(2023, 10, 8, 11, 30),
+        EndTime: new Date(2023, 10, 8, 13, 45),
+        IsAllDay: false,
+        OwnerId: 3
     }
 ];
