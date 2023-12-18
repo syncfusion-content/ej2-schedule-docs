@@ -17,7 +17,7 @@ var scheduleObj = new ej.schedule.Schedule({
         textField: 'OwnerText', idField: 'OwnerId', colorField: 'Color', query: new ej.data.Query().where('OwnerId', 'equal', 1)
     }],
     toolbarItems: [{ name: 'Previous', align: 'Left' }, { name: 'Next', align: 'Left' }, { name: 'DateRangeText', align: 'Left' },
-    {type: 'Input', align: 'Right', template: new ej.dropdowns.DropDownList({value: 1, showClearButton: false, width: 125,
+    {type: 'Input', align: 'Center', template: new ej.dropdowns.DropDownList({value: 1, showClearButton: false, width: 125,
             fields: { text: 'OwnerText', value: 'OwnerId' },
             dataSource: ownerCollections,
             change: onChange
