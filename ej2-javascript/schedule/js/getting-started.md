@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with ##Platform_Name## Schedule control | Syncfusion
-description:  Checkout and learn about Getting started with ##Platform_Name## Schedule control of Syncfusion Essential JS 2 and more details.
+title: Getting started with JavaScript Schedule Control | Syncfusion
+description: Checkout and learn about getting started with JavaScript Schedule control of Syncfusion Essential JS 2 and more details.
 platform: ej2-javascript
 control: Getting started 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started in ##Platform_Name## Schedule control
+# Getting Started with JavaScript Schedule Control
 
 This section briefly explains how to create the [**JavaScript Scheduler**](https://www.syncfusion.com/javascript-ui-controls/js-scheduler) component and configure its available functionalities in a JavaScript application.
 
