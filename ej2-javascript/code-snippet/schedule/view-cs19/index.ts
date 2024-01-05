@@ -1,9 +1,9 @@
 
 
-import { Schedule, Month, Year, TimelineYear, TimelineMonth } from '@syncfusion/ej2-schedule';
+import { Schedule, Month } from '@syncfusion/ej2-schedule';
 import { scheduleData } from './datasource.ts';
 
-Schedule.Inject(Month, Year, TimelineYear, TimelineMonth);
+Schedule.Inject(Month);
 let scheduleObj: Schedule = new Schedule({
     width: '100%',
     height: '380px',
