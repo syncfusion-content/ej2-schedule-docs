@@ -93,5 +93,3 @@ The accessibility compliance of the Scheduler component is shown in the followin
 ## See also
 
 - [Accessibility in Syncfusion components](../common/accessibility)
-
-> 
