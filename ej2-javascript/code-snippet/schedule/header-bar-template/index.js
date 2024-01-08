@@ -25,19 +25,16 @@ var scheduleObj = new ej.schedule.Schedule({
             change: onChange
         })
     }, { name: 'Today', align: 'Right' }],
-    eventSettings: { dataSource: scheduleData }
+    eventSettings: { dataSource: scheduleData, query: new ej.data.Query().where('OwnerId', 'equal', 1) }
 });
 scheduleObj.appendTo('#Schedule');
 
 
 function onChange(args) {
-    var resourcePredicate;
     var value = args.value;
-    if (resourcePredicate) {
-        resourcePredicate = resourcePredicate.or(new ej.data.Predicate('OwnerId', 'equal', value));
-    } else {
-        resourcePredicate = new ej.data.Predicate('OwnerId', 'equal', value);
-    }
+    var resourcePredicate;
+    resourcePredicate = new ej.data.Predicate('OwnerId', 'equal', value);
     scheduleObj.resources[0].query = resourcePredicate ? new ej.data.Query().where(resourcePredicate) :
         new ej.data.Query().where('OwnerId', 'equal', 1);
+    scheduleObj.eventSettings.query = new ej.data.Query().where('OwnerId', 'equal', value);
 }
