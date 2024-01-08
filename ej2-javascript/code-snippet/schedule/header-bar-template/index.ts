@@ -32,18 +32,15 @@ let scheduleObj: Schedule = new Schedule({
             change: onChange
         })
     }, { name: 'Today', align: 'Right' }],
-    eventSettings: { dataSource: scheduleData }
+    eventSettings: { dataSource: scheduleData, query: new Query().where('OwnerId', 'equal', 1) }
 });
 scheduleObj.appendTo('#Schedule');
 
 function onChange(args: ChangeEventArgs): void {
     let resourcePredicate: Predicate;
     let value = args.value;
-    if (resourcePredicate) {
-        resourcePredicate = resourcePredicate.or(new Predicate('OwnerId', 'equal', value));
-    } else {
-        resourcePredicate = new Predicate('OwnerId', 'equal', value);
-    }
+    resourcePredicate = new Predicate('OwnerId', 'equal', value)
     scheduleObj.resources[0].query = resourcePredicate ? new Query().where(resourcePredicate) :
         new Query().where('OwnerId', 'equal', 1);
+    scheduleObj.eventSettings.query = new Query().where('OwnerId', 'equal', value);
 }
