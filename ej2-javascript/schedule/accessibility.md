@@ -15,7 +15,7 @@ The Scheduler has been designed based on the WAI-ARIA specifications, thus apply
 
 The Scheduler makes use of the most required ARIA attributes such as `aria-label` and `role` to support the accessibility in it. To be more accurate, it must be used with an ARIA compliant browser along with the screen reader running from backend.
 
-The accessibility compliance for the Schedule component is outlined below.
+The accessibility compliance for the Schedule control is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -36,15 +36,15 @@ The accessibility compliance for the Schedule component is outlined below.
     }
 </style>
 
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the control meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/intermediate.png" alt="Intermediate"> - Some features of the control do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The control does not meet the requirement.</div>
 
 ## ARIA attributes
 
-The Scheduler parent element is assigned with a role of `main`, to denote it as the main content of a component as well as a unique element of the entire document.
+The Scheduler parent element is assigned with a role of `main`, to denote it as the main content of a control as well as a unique element of the entire document.
 
 The following ARIA attributes are used in the Scheduler.
 
@@ -64,8 +64,8 @@ All the Scheduler actions can be controlled via keyboard keys by using the `allo
 | Keys | Description |
 |-----|-----|
 | <kbd>Alt</kbd> + <kbd>j</kbd> | Focuses the Scheduler element [provided from application end]. |
-| <kbd>Tab</kbd> | Focuses the first or active item on the Scheduler header bar and then move the focus to the next available event elements. If no events present, then focus moves out of the component. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Reverse focusing of the `Tab` key functionality. Inverse focusing of event elements from the last one and then move onto the first or active item on Scheduler header bar and then moves out of the component.
+| <kbd>Tab</kbd> | Focuses the first or active item on the Scheduler header bar and then move the focus to the next available event elements. If no events present, then focus moves out of the control. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Reverse focusing of the `Tab` key functionality. Inverse focusing of event elements from the last one and then move onto the first or active item on Scheduler header bar and then moves out of the control.
 | <kbd>Enter</kbd> | Opens the quick info popup on the selected cells or events. |
 | <kbd>Escape</kbd> | Closes any of the popup that are in open state. |
 | <kbd>Arrow</kbd> | To move onto the next available cells in either of the needed directions. (left, right, top and right) |
@@ -84,9 +84,9 @@ All the Scheduler actions can be controlled via keyboard keys by using the `allo
 
 ## Ensuring accessibility
 
-The Scheduler component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Scheduler control accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Scheduler component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/schedule.html) in a new window to evaluate the accessibility of the Scheduler component with accessibility tools.
+The accessibility compliance of the Scheduler control is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/schedule.html) in a new window to evaluate the accessibility of the Scheduler control with accessibility tools.
 
 {% previewsample "https://ej2.syncfusion.com/accessibility/schedule.html" %}
 
